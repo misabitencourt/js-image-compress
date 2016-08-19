@@ -4,7 +4,9 @@ Compres images on browser with javascript
 ## Example (es5):
 ```
 var imageSource = 'http://www.mysite.com/my-image.jpg'; // base64 or link
-$image.resize(imageSource, {width: 340, height: 340}, 0.4, function(file) { // source, dimension, compression, success, error
+
+// source, dimension, compression, success, error
+$image.resize(imageSource, {width: 340, height: 340}, 0.4, function(file) { 
   console.log('Image base64:');
   console.log(file);
 }, function() {
