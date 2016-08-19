@@ -1,0 +1,31 @@
+{
+  "name": "js-image-compress",
+  "version": "1.0.0",
+  "description": "Compress images on browser with javascript",
+  "main": "src/image.js",
+  "scripts": {
+    "build": "uglifyjs src/image.js > dist/image.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/misabitencourt/js-image-compress.git"
+  },
+  "keywords": [
+    "js",
+    "image",
+    "compress",
+    "resize",
+    "jpg",
+    "picture",
+    "photo"
+  ],
+  "author": "Misael Braga de Bitencourt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misabitencourt/js-image-compress/issues"
+  },
+  "homepage": "https://github.com/misabitencourt/js-image-compress#readme",
+  "dependencies": {
+    "uglify-js": "^2.7.3"
+  }
+}
