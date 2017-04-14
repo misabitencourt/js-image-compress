@@ -1,10 +1,13 @@
 {
-  "name": "js-image-compress",
+  "name": "image-compress",
   "version": "1.0.0",
   "description": "Compress images on browser with javascript",
-  "main": "src/image.js",
+  "main": "dist/image-compress.umd.js",
   "scripts": {
-    "build": "uglifyjs src/image.js > dist/image.min.js"
+    "lint": "xo",
+    "build": "rollup -c && npm run uglify",
+    "docs": "documentation readme src/image-compress.js --section=API -q --shallow",
+    "uglify": "uglifyjs dist/image-compress.umd.js -cm -o dist/image-compress.min.js"
   },
   "repository": {
     "type": "git",
@@ -20,12 +23,23 @@
     "photo"
   ],
   "author": "Misael Braga de Bitencourt",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/misabitencourt/js-image-compress/issues"
   },
   "homepage": "https://github.com/misabitencourt/js-image-compress#readme",
-  "dependencies": {
-    "uglify-js": "^2.7.3"
+  "devDependencies": {
+    "documentation": "^4.0.0-beta.19",
+    "rollup": "^0.41.6",
+    "rollup-plugin-buble": "^0.15.0",
+    "uglify": "^0.1.5"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false,
+    "globals": [
+      "document",
+      "Image"
+    ]
   }
 }
